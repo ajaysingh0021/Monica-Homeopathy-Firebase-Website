@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 150 14% 95%; /* Off-white #F2F4F3 */
+    --foreground: 210 20% 25%; /* Dark Slate Gray #3A4B53 */
+
+    --muted: 150 10% 88%;
+    --muted-foreground: 150 10% 45%;
+
+    --popover: 150 14% 100%;
+    --popover-foreground: 210 20% 25%;
+
+    --card: 150 14% 100%;
+    --card-foreground: 210 20% 25%;
+
+    --border: 150 10% 80%;
+    --input: 150 10% 80%;
+
+    --primary: 176 47% 73%; /* Light teal #99DDD9 */
+    --primary-foreground: 176 47% 20%; /* Dark teal for text on primary */
+
+    --secondary: 170 30% 85%; /* Lighter, less saturated teal/neutral gray */
+    --secondary-foreground: 170 30% 20%;
+
+    --accent: 16 72% 70%; /* Soft coral #E9967A */
+    --accent-foreground: 16 72% 95%; /* Light color for text on accent */
+    
+    --destructive: 0 70% 65%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 176 47% 53%; /* Darker shade of primary for focus rings */
+    
+    --radius: 0.5rem;
+
+    /* Chart colors - can be adjusted if charts are used extensively */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+    /* Sidebar variables - kept for compatibility if shadcn/ui sidebar is used, but main nav will be custom */
+    --sidebar-background: 150 14% 92%; /* Slightly darker off-white for sidebar bg */
+    --sidebar-foreground: 210 20% 25%;
+    --sidebar-primary: 176 47% 65%; /* Primary for sidebar active items */
+    --sidebar-primary-foreground: 176 47% 15%;
+    --sidebar-accent: 176 47% 80%; /* Lighter primary for hover */
+    --sidebar-accent-foreground: 176 47% 20%;
+    --sidebar-border: 150 10% 75%;
+    --sidebar-ring: 176 47% 53%;
+  }
+
+  .dark {
+    /* Define dark mode colors if needed, for now using light mode values as placeholders */
+    --background: 210 20% 10%; 
+    --foreground: 150 14% 95%;
+
+    --muted: 210 20% 15%;
+    --muted-foreground: 150 10% 65%;
+
+    --popover: 210 20% 8%;
+    --popover-foreground: 150 14% 95%;
+
+    --card: 210 20% 8%;
+    --card-foreground: 150 14% 95%;
+
+    --border: 210 20% 20%;
+    --input: 210 20% 20%;
+
+    --primary: 176 47% 63%; 
+    --primary-foreground: 176 47% 10%; 
+
+    --secondary: 170 30% 25%; 
+    --secondary-foreground: 170 30% 80%;
+
+    --accent: 16 72% 60%; 
+    --accent-foreground: 16 72% 10%;
+    
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 176 47% 43%;
+    
+    --chart-1: 12 76% 51%;
+    --chart-2: 173 58% 29%;
+    --chart-3: 197 37% 14%;
+    --chart-4: 43 74% 56%;
+    --chart-5: 27 87% 57%;
+
+    --sidebar-background: 210 20% 12%;
+    --sidebar-foreground: 150 14% 90%;
+    --sidebar-primary: 176 47% 55%;
+    --sidebar-primary-foreground: 176 47% 95%;
+    --sidebar-accent: 176 47% 20%;
+    --sidebar-accent-foreground: 176 47% 85%;
+    --sidebar-border: 210 20% 25%;
+    --sidebar-ring: 176 47% 43%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* font-family is set by Next/Font in layout.tsx */
+  }
+}
